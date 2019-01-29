@@ -11,7 +11,7 @@ public class Reset : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        originalPos = gameObject.transform.position;
         originalRot = gameObject.transform.rotation;
     }
 

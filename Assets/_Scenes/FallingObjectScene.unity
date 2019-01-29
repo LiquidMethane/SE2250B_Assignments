@@ -1233,7 +1233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabVar: {fileID: 507902286798642296, guid: c8619330548b46347b6433b80fd629df,
     type: 3}
-  height: 7
+  height: 100
+  cubeSize: 12
 --- !u!1 &1748224564
 GameObject:
   m_ObjectHideFlags: 0

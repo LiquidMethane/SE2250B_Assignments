@@ -7,20 +7,23 @@ public class InitPrefab : MonoBehaviour
     public GameObject prefabVar;
     public int height;
     private GameObject prefab;
+    public int cubeSize;
+    private int boundary;
 
     Vector3 pos;
 
     // Start is called before the first frame update
     void Start()
     {
-        pos = new Vector3(-8, height, -8);
-        for (int i = 0; i < 64; i++)
+        boundary = cubeSize / 2;
+        pos = new Vector3(-boundary, height, -boundary);
+        for (int i = 0; i < cubeSize; i++)
         {
-            pos = new Vector3(-8, height + i, -8);
-            for (int j = 0; j < 16; j++)
+            pos = new Vector3(-boundary, height + i, -boundary);
+            for (int j = 0; j < cubeSize; j++)
             {
-                pos = new Vector3(-8 + j, height + i, -8);
-                for (int k = 0; k < 16; k++)
+                pos = new Vector3(-boundary + j, height + i, -boundary);
+                for (int k = 0; k < cubeSize; k++)
                 {
                     prefab = Instantiate(prefabVar);
                     prefab.transform.position = pos + new Vector3(0, 0, k);
