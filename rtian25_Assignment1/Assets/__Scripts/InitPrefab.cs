@@ -17,7 +17,7 @@ public class InitPrefab : MonoBehaviour
     {
         boundary = cubeSize / 2;
         pos = new Vector3(-boundary, height, -boundary);
-        for (int i = 0; i < cubeSize; i++)
+        for (int i = 0; i < 32; i++)
         {
             pos = new Vector3(-boundary, height + i, -boundary);
             for (int j = 0; j < cubeSize; j++)
